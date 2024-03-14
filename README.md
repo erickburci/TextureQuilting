@@ -1,3 +1,5 @@
+![image](https://github.com/erickburci/TextureQuilting/assets/159087967/50e1e309-a7e4-4ee4-adbd-a0c4754747a7)
+
 # Texture Quilting
 
 In this project, I use code to stitch together image patches sampled from an input texture in order to synthesize new texture images.
@@ -32,15 +34,15 @@ The function ***quilt_demo*** puts together the pieces. It takes a sample textur
 #### Discussion/Analysis
 ***For each result shown, explain here how it differs visually from the default setting of the parameters and explain why:***
 
-. (1) Increased Tile Size
+. (1) **Increased Tile Size**
     Increasing the tile size creates a larger synthesized texture image that fits more of the original sample and has smaller, more complete rocks. When tile size is increased we are able to get more detail from the original texture sample. We can see the detail in the form of more natural looking rocks. In the original image we see a lot of elongated rocks which are easier to notice with the smaller overall image size. In the new image, this effect is less noticeable as the rocks appear smaller overall which gives the illusion of more naturally shaped rocks. 
 
 
-. (2) Decreased Overlap
+. (2) **Decreased Overlap**
     With decreased overlap there is an increase in visible artifacts (i.e. the seams between the tiles became more visible), causing the overall synthesized texture image to appear more blocky. As a result we see a lot of rocks with odd shapes or rocks that seem to collide and merge with each other in unnatural ways. This is because with less overlap, there are fewer pixels to choose from when finding a seam. Also, less overlap means less opportunity for finding matching pixels between neighboring tiles, hence the appearance of more artifacts. Lastly, with less overlap, more of each original tile is used causing the final synthesized texture image to be slightly larger.
 
 
-. (3) Increased K
+. (3) **Increased K**
     When k was increased, there seemed to be less artifacts (i.e. less little black smudges within the rocks). The individual tiles appear to have blended more seamlessly and there seems to be more variation in the shapes and sizes of the rocks. This is because when k is increased there is a larger set of randomly selected sub-tiles to choose from, which then increases the opportunity of finding better matching candidates when trying to find a tile that has the least sum of squared differences (within the topkmatch function). Having a larger set of random k patches also contributes to more variety in the texture. 
 
 ### Random Texture
